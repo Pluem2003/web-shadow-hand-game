@@ -57,7 +57,7 @@ export default function ShadowGame() {
               SHADOW SIGN AI
             </h1>
             <p className="text-zinc-500 text-xs font-mono mt-1 uppercase tracking-[0.2em]">
-              FIBO Robotics Lab | Vision System
+              Robotics Lab | Vision System
             </p>
           </div>
           <div className="text-right">

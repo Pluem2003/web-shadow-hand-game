@@ -38,13 +38,11 @@ export default function ShadowGame() {
 
     // ชื่อท่อ 'shadow_data' ต้องตรงกับที่เขียนใน Python (sio.emit)
     socket.on("shadow_data", (payload) => {
-      // แปลง Bytes เป็น URL เพื่อแสดงผล
-      const blob = new Blob([payload.img], { type: "image/jpeg" });
-      const url = URL.createObjectURL(blob);
-      
-      setData({ img: url, label: payload.label });
-
-      return () => URL.revokeObjectURL(url);
+    // รับเป็น string base64 ตรงๆ เลย
+      setData({ 
+        img: payload.img, 
+        label: payload.label 
+      });
     });
 
     return () => {
